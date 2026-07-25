@@ -1,0 +1,63 @@
+{
+  "name": "Mission Control",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "satellite-status",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -144,
+        -32
+      ],
+      "id": "872989b9-04fc-473c-a50e-ef93888eadf3",
+      "name": "Webhook",
+      "webhookId": "581f8c40-b2e0-4584-a5a5-c6e8f6fb96e2"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"satellite\": \"SAT-01\",\n  \"status\": \"Nominal\",\n  \"battery\": \"95%\",\n  \"temperature\": \"18°C\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        64,
+        -32
+      ],
+      "id": "24760b3a-54d5-448e-989e-bef1a0b69fad",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "bab7a056-e62e-4bcd-9e7c-0896dd783082",
+  "meta": {
+    "instanceId": "e905254954e7dd27cf173d08463587260dc948a1d3aa2e1567e3885551d55ddc"
+  },
+  "nodeGroups": [],
+  "id": "XeBMJElwuXYB9GBj",
+  "tags": []
+}
