@@ -145,7 +145,7 @@ const panel = document.getElementById("telemetryPanel");
 telemetryBtn.addEventListener("click", async () => {
 
     const response = await fetch(
-        "https://ai.tamilspacetech.com/webhook/satellite-status"
+        "your web hook URL"
     );
 
     const data = await response.json();
