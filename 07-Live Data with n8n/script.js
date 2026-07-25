@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const WEBHOOK_URL = "https://ai.tamilspacetech.com/webhook/iss-live";
+const WEBHOOK_URL = "your webhook URL";
 
 // ----------------------------------------------------
 // Scene
